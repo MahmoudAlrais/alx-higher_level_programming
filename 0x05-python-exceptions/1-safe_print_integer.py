@@ -2,13 +2,13 @@
 
 
 def safe_print_integer(value):
-    """Print an integer with "{:d}".format().
+    """Print  integer with "{:d}".format().
 
     Args:
-        value (int): The integer to print.
+        value (int):  integer  print.
 
     Returns:
-        If a TypeError or ValueError occurs - False.
+        If TypeError or ValueError occurs - False.
         Otherwise - True.
     """
     try:

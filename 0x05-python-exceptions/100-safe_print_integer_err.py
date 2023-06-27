@@ -4,9 +4,9 @@ import sys
 
 
 def safe_print_integer_err(value):
-    """Prints an integer with "{:d}".format().
+    """Prints  integer with "{:d}".format().
 
-    If a ValueError message is caught, a corresponding
+    If  ValueError message is caught, corresponding
     message is printed to standard error.
 
     Args:

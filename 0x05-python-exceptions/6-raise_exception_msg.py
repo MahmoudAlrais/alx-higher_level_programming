@@ -2,5 +2,5 @@
 
 
 def raise_exception_msg(message=""):
-    """Raise a NameError exception with a message."""
+    """Raise  NameError exception with message."""
     raise NameError(message)
