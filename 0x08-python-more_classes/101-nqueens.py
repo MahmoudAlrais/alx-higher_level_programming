@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""The N-queens puzzle"""
 
 import sys
 
@@ -12,14 +13,14 @@ def init_board(n):
 
 
 def board_deepcopy(board):
-    """Return  deepcopy of chessboard."""
+    """Return deepcopy of chessboard."""
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
     return (board)
 
 
 def get_solution(board):
-    """Return the list of lists representation in a board."""
+    """Return list of lists representation in board."""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):

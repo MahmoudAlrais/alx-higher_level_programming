@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module 8-rectangle
+"""
 
 
 class Rectangle:
@@ -9,14 +11,14 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        """Initializes a Rectangle instance in a contructor.
+        """Initializes  Rectangle instance in  contructor.
         """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        """Returns an informal string representation.
+        """Returns informal string representation.
         """
         if self.__height == 0 or self.__width == 0:
             return ''
@@ -28,23 +30,23 @@ class Rectangle:
         return rec_str[:-1]
 
     def __repr__(self):
-        """Return internal string representation of a Rectangle instance
+        """Return internal string representation of Rectangle instance
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Fire when a rectangle is destroy."""
+        """Fire when rectangle is destroy."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
-        """Retrieves the width of a Rectangle instance."""
+        """Retrieves width of Rectangle instance."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Sets the width of a Rectangle instance
+        """Sets width of Rectangle instance
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -90,4 +92,4 @@ class Rectangle:
         if rect_1.area() == rect_2.area() or rect_1.area() > rect_2.area():
             return rect_1
         if rect_1.area() < rect_2.area():
-            return rect_2i
+            return rect_2

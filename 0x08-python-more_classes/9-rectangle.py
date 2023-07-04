@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module 9-rectangle
+"""
 
 
 class Rectangle:
@@ -9,14 +11,14 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        """Initializes a Rectangle instance in a contructor.
+        """Initializes Rectangle instance in contructor.
         """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        """Returns an informal string representation.
+        """Returns informal string representation.
         """
         if self.__height == 0 or self.__width == 0:
             return ''
@@ -28,7 +30,7 @@ class Rectangle:
         return rec_str[:-1]
 
     def __repr__(self):
-        """Return internal a string representation of a Rectangle instance
+        """Return internal string representation of Rectangle instance
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 

@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module 7-rectangle
+"""
 
 
 class Rectangle:
@@ -16,7 +18,7 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        """Returns an informal string representation
+        """Returns informal string representation
         """
         if self.__height == 0 or self.__width == 0:
             return ''
@@ -33,18 +35,18 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Fire when a rectangle instance is destroyed."""
+        """Fire when rectangle instance is destroyed."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
-        """Retrieves the width of a Rectangle instance."""
+        """Retrieves width of Rectangle instance."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Sets the width of a Rectangle instance
+        """Sets width of Rectangle instance
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -54,12 +56,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retrieves the height of a Rectangle instance."""
+        """Retrieves height of Rectangle instance."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Sets the height of a Rectangle instance
+        """Sets height of Rectangle instance
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -68,12 +70,12 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Calculates the area of a Rectangle instance
+        """Calculates area of Rectangle instance
         """
         return self.__width * self.__height
 
     def perimeter(self):
-        """Calculates the perimeter of a Rectangle instance
+        """Calculates perimeter of Rectangle instance
         """
         if self.__height == 0 or self.__width == 0:
             return 0
